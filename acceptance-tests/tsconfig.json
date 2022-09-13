@@ -1,0 +1,29 @@
+{
+  "extends": "../shared/config/tsconfig.base.json",
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "typeRoots": ["./node_modules/@types"],
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": [
+        "src/*"
+      ],
+      "@shared/*": [
+        "../shared/src/*"
+      ]
+    },
+    "lib": [
+      "dom"
+    ],
+    "types": [
+      "node",
+      "@types/jest"
+    ]
+  },
+  "include": [
+    "src"
+  ]
+}

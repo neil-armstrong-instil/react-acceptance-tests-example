@@ -1,0 +1,29 @@
+{
+  "extends": "../shared/config/tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./build",
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": [
+        "src/*"
+      ],
+      "@shared/*": [
+        "../shared/src/*"
+      ]
+    },
+    "typeRoots": ["./node_modules/@types"],
+    "types": [
+      "jest",
+      "node",
+    ]
+  },
+  "include": [
+    "./src/**/*",
+    "./capacitor.config.ts",
+    "./capacitor.config.js"
+  ],
+  "exclude": [
+    "../shared/src/**/*.test.ts",
+    "../shared/src/**/*.test.tsx"
+  ]
+}

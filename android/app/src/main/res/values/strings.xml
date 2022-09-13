@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">acceptance-test-example</string>
+    <string name="title_activity_main">acceptance test example</string>
+    <string name="package_name">co.instil</string>
+    <string name="custom_url_scheme">co.instil</string>
+</resources>

@@ -1,0 +1,35 @@
+{
+  "name": "acceptance-test-example-acceptance-tests",
+  "private": true,
+  "scripts": {
+    "build": "yarn checks",
+    "checks": "yarn lint && yarn type-check && yarn test",
+    "lint": "yarn eslint --max-warnings=0 \"./src/**/*.{ts,tsx}\"",
+    "type-check": "yarn tsc --project ./tsconfig.json --noEmit --skipLibCheck",
+    "test": "yarn jest --passWithNoTests -c jest.unit-tests.config.js",
+    "setup": "npx playwright install",
+    "acceptance-tests": "yarn jest --passWithNoTests --runInBand -c jest.all.config.js",
+    "acceptance-tests:dev": "ACCEPTANCE_TESTS_MODE=Development yarn acceptance-tests",
+    "acceptance-tests:electron": "ACCEPTANCE_TESTS_MODE=Electron yarn acceptance-tests",
+    "acceptance-tests:android": "ACCEPTANCE_TESTS_MODE=Android yarn acceptance-tests",
+    "acceptance-tests:aws": "ACCEPTANCE_TESTS_MODE=Webapp yarn acceptance-tests",
+    "create-avd": "yarn ts-node -r tsconfig-paths/register --project ./tsconfig.json src/scripts/CreateAndroidVirtualDevice.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.22.2",
+    "@types/jest": "28.1.5",
+    "@types/node": "18.0.3",
+    "@types/uuid": "8.3.4",
+    "@typescript-eslint/eslint-plugin": "5.10.2",
+    "@typescript-eslint/parser": "5.12.0",
+    "eslint": "8.9.0",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-jest": "26.4.5",
+    "eslint-plugin-no-relative-import-paths": "1.3.3",
+    "jest": "28.1.2",
+    "ts-jest": "28.0.5",
+    "ts-node": "10.8.0",
+    "typescript": "4.7.2",
+    "uuid": "8.3.2"
+  }
+}

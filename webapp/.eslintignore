@@ -1,0 +1,6 @@
+src/**/*.component-test.ts
+src/**/*.js
+config-overrides.js
+jest.*.js
+build
+public

@@ -1,0 +1,6 @@
+{
+	"appId": "acceptance.test.example",
+	"appName": "acceptance-test-example",
+	"webDir": "webapp/build",
+	"bundledWebRuntime": false
+}

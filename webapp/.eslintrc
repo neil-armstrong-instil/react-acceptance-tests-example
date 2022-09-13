@@ -1,0 +1,35 @@
+{
+  "extends": [
+    "../shared/config/.eslintrc.base.json",
+    "plugin:react/recommended"
+  ],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "no-relative-import-paths"
+  ],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "react/prop-types": 0,
+    "no-relative-import-paths/no-relative-import-paths": [
+      "warn",
+      {
+        "allowSameFolder": true,
+        "rootDir": "src"
+      }
+    ],
+    "react/jsx-tag-spacing": [
+      "error",
+      {
+        "beforeSelfClosing": "never"
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  }
+}

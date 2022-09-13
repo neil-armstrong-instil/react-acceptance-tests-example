@@ -1,0 +1,35 @@
+{
+  "appId": "acceptance-test-example",
+  "directories": {
+    "buildResources": "resources"
+  },
+  "files": [
+    "assets/**/*",
+    "build/**/*",
+    "capacitor.config.*",
+    "app/**/*",
+    "local-server"
+  ],
+  "publish": {
+    "provider": "github"
+  },
+  "nsis": {
+    "allowElevation": true,
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true
+  },
+  "win": {
+    "target": "nsis",
+    "icon": "assets/appIcon.ico"
+  },
+  "mac": {
+    "category": "audio",
+    "target": "dmg",
+    "extraFiles": [
+      {
+        "from": "local-server/",
+        "to": "local-server/"
+      }
+    ]
+  }
+}

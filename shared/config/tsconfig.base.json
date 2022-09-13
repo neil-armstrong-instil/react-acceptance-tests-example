@@ -1,0 +1,31 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "typeRoots": [
+      "../node_modules/@types",
+      "../../node_modules/@types"
+    ],
+    "types": [
+      "jest",
+    ]
+  },
+  "include": [
+    "../src/**/*"
+  ],
+  "exclude": [
+    "../src/**/*.test.ts",
+    "../src/**/*.debug.ts",
+    "../src/**/*.test.tsx",
+  ]
+}

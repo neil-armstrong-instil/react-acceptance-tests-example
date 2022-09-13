@@ -1,0 +1,6 @@
+{
+  "appId": "co.instil",
+  "appName": "demo",
+  "webDir": "webapp/build",
+  "bundledWebRuntime": false
+}
