@@ -5,7 +5,7 @@ import {given, then, when} from "@src/dsl/shared/acceptance-criteria-mapping/Acc
 
 let Todo: TodoPage;
 
-runTestsOn(["Development", "Electron", "Android"], () => {
+runTestsOn(["Webapp", "Development", "Electron", "Android"], () => {
   beforeEach(async () => {
     Todo = await buildTodoPage();
   });
