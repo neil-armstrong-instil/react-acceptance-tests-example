@@ -11,8 +11,7 @@ runTestsOn(["Webapp", "Development", "Electron", "Android"], () => {
     Todo = await buildTodoPage();
   });
 
-  // TODO: Renable when implemented
-  given.skip("three todos on the page", () => {
+  given("three todos on the page", () => {
     let todo1: Todo;
     let todo2: Todo;
     let todo3: Todo;

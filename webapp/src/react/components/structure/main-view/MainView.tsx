@@ -15,7 +15,7 @@ export const MainView: FC = () => {
     }]);
   }, [todos]);
 
-  const onChange: OnTodoChanged = useCallback((updatedTodo: Todo, indexToUpdate: number): void => {
+  const onTodoChanged: OnTodoChanged = useCallback((updatedTodo: Todo, indexToUpdate: number): void => {
     setTodos(todos.map((todo, index) => {
       if (index !== indexToUpdate) return todo;
 
@@ -37,7 +37,8 @@ export const MainView: FC = () => {
 
       <Todos
         todos={todos}
-        onChange={onChange}
+        onTodosChanged={setTodos}
+        onTodoChanged={onTodoChanged}
         onDelete={onDelete}
       />
     </div>

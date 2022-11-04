@@ -29,4 +29,8 @@ export class TodoComponent extends BaseComponent {
       textContent: await this.textContent()
     };
   }
+
+  async dragToTodo(to: TodoComponent): Promise<void> {
+    await this.dragTo(to.container);
+  }
 }

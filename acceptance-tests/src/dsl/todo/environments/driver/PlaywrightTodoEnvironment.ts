@@ -1,7 +1,6 @@
 import type {TodoEnvironment} from "@src/dsl/todo/environments/base/TodoEnvironment";
 import {BasePlaywrightDriver} from "@src/dsl/shared/drivers/playwright/BasePlaywrightDriver";
 import type {PlaywrightWindow} from "@src/dsl/shared/environments/windows/playwright/PlaywrightWindow";
-import {unimplementedMethodError} from "@src/dsl/shared/errors/UnimplementedMethodError";
 import {TodosComponent} from "@src/dsl/todo/environments/driver/components/todos/TodosComponent";
 import type {Todo} from "@src/dsl/todo/types/Todo";
 import {ToolbarComponent} from "@src/dsl/todo/environments/driver/components/toolbar/ToolbarComponent";
@@ -53,6 +52,15 @@ export class PlaywrightTodoEnvironment extends BasePlaywrightDriver implements T
     return await this.todos.getTodoAtIndex(todo.index).details();
   }
 
-  dropOnto = unimplementedMethodError;
-  getAtIndex = unimplementedMethodError;
+  async dropOnto(toDrag: Todo, toDropOnto: Todo): Promise<void> {
+    const from = await this.todos.todoWithText(toDrag.textContent);
+    const to = await this.todos.todoWithText(toDropOnto.textContent);
+
+    await from.dragToTodo(to);
+  }
+
+  async getAtIndex(index: number): Promise<Todo> {
+    const todoComponent = await this.todos.getTodoAtIndex(index);
+    return await todoComponent.details();
+  }
 }
