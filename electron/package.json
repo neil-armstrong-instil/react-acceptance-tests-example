@@ -21,7 +21,7 @@
     "@capacitor/cli": "4.3.0",
     "@capacitor/electron": "2.5.0",
     "@types/jest": "29.1.2",
-    "@types/node": "18.0.3",
+    "@types/node": "18.11.9",
     "@typescript-eslint/eslint-plugin": "5.40.1",
     "@typescript-eslint/parser": "5.40.1",
     "electron": "21.1.1",

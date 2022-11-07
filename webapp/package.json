@@ -6,7 +6,7 @@
     "build": "yarn checks && yarn compile",
     "checks": "yarn lint && yarn test",
     "lint": "yarn eslint --max-warnings=0 \"./src/**/*.{ts,tsx}\"",
-    "test": "jest test  --passWithNoTests --watchAll=false --config jest.config.js",
+    "test": "yarn jest test --passWithNoTests --watchAll=false --config jest.config.js",
     "compile": "tsc && yarn vite build",
     "preview": "yarn vite preview"
   },

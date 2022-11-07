@@ -5,11 +5,12 @@
   "workspaces": [
     "shared",
     "webapp",
+    "api",
     "electron",
     "acceptance-tests"
   ],
   "engines": {
-    "node": ">=16.5.0"
+    "node": ">=18.6.0"
   },
   "scripts": {
     "bootstrap": "yarn build && bootstrap:android && yarn package",
@@ -18,6 +19,7 @@
     "bootstrap:android:gradle": "brew install gradle && (cd android && gradle wrapper)",
     "build": "yarn workspaces foreach run build",
     "start:webapp": "yarn workspace acceptance-test-example-webapp start",
+    "start:api": "yarn workspace acceptance-test-example-api start",
     "start:electron": "yarn sync-webapp:electron && yarn workspace acceptance-test-example-electron start-live",
     "start:android": "yarn sync-webapp:android && npx cap open android",
     "sync-webapp": "yarn sync-webapp:electron && yarn sync-webapp:android",

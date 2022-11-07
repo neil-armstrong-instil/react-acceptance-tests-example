@@ -1,0 +1,4 @@
+jest.config.js
+jest.all.config.js
+jest.unit-tests.config.js
+**/__generated__/resolvers-types.ts

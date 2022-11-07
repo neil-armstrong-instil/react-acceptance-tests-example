@@ -1,0 +1,34 @@
+type Query {
+    todos: [Todo]!
+}
+
+type Mutation {
+    todosReordered(newOrderAsIds: [String!]!): MutationResponse!
+    todoAdded(newTodo: TodoInput!): TodoAddedMutationResponse!
+    todoDeleted(id: String!): MutationResponse!
+}
+
+type Todo {
+    id: String!
+    message: String!
+}
+
+input TodoInput {
+    message: String!
+}
+
+type TodoAddedMutationResponse {
+    result: MutationResult!
+    message: String
+    todo: Todo
+}
+
+type MutationResponse {
+    result: MutationResult!
+    message: String
+}
+
+enum MutationResult {
+    SUCCESS,
+    FAILURE
+}

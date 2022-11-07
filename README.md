@@ -4,7 +4,7 @@
 
 ### Required dependencies
 1. Install Nodenv: https://github.com/nodenv/nodenv#homebrew-on-macos
-2. Install Node version: `$ nodenv install 16.5.0`
+2. Install Node version: `$ nodenv install 18.6.0`
 3. Install Yarn 2: https://yarnpkg.com/getting-started/install
 4. Install dependencies: `$ yarn install`
 5. Test it works! `$ yarn start:webapp`
