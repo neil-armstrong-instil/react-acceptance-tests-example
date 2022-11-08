@@ -1,5 +1,5 @@
 import { GraphQLResolveInfo } from 'graphql';
-import { Context } from '@src/context/Context';
+import { Context } from '@shared/graphql/context/Context';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
@@ -19,6 +19,7 @@ export type Mutation = {
   __typename?: 'Mutation';
   todoAdded: TodoAddedMutationResponse;
   todoDeleted: MutationResponse;
+  todoUpdated: MutationResponse;
   todosReordered: MutationResponse;
 };
 
@@ -33,8 +34,15 @@ export type MutationTodoDeletedArgs = {
 };
 
 
+export type MutationTodoUpdatedArgs = {
+  id: Scalars['String'];
+  todoUpdate: TodoInput;
+};
+
+
 export type MutationTodosReorderedArgs = {
-  newOrderAsIds: Array<Scalars['String']>;
+  atIndex: Scalars['Int'];
+  id: Scalars['String'];
 };
 
 export type MutationResponse = {
@@ -50,7 +58,7 @@ export enum MutationResult {
 
 export type Query = {
   __typename?: 'Query';
-  todos: Array<Maybe<Todo>>;
+  todos: Array<Todo>;
 };
 
 export type Todo = {
@@ -141,6 +149,7 @@ export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs
 /** Mapping between all available schema types and the resolvers types */
 export type ResolversTypes = ResolversObject<{
   Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
+  Int: ResolverTypeWrapper<Scalars['Int']>;
   Mutation: ResolverTypeWrapper<{}>;
   MutationResponse: ResolverTypeWrapper<MutationResponse>;
   MutationResult: MutationResult;
@@ -154,6 +163,7 @@ export type ResolversTypes = ResolversObject<{
 /** Mapping between all available schema types and the resolvers parents */
 export type ResolversParentTypes = ResolversObject<{
   Boolean: Scalars['Boolean'];
+  Int: Scalars['Int'];
   Mutation: {};
   MutationResponse: MutationResponse;
   Query: {};
@@ -166,7 +176,8 @@ export type ResolversParentTypes = ResolversObject<{
 export type MutationResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']> = ResolversObject<{
   todoAdded?: Resolver<ResolversTypes['TodoAddedMutationResponse'], ParentType, ContextType, RequireFields<MutationTodoAddedArgs, 'newTodo'>>;
   todoDeleted?: Resolver<ResolversTypes['MutationResponse'], ParentType, ContextType, RequireFields<MutationTodoDeletedArgs, 'id'>>;
-  todosReordered?: Resolver<ResolversTypes['MutationResponse'], ParentType, ContextType, RequireFields<MutationTodosReorderedArgs, 'newOrderAsIds'>>;
+  todoUpdated?: Resolver<ResolversTypes['MutationResponse'], ParentType, ContextType, RequireFields<MutationTodoUpdatedArgs, 'id' | 'todoUpdate'>>;
+  todosReordered?: Resolver<ResolversTypes['MutationResponse'], ParentType, ContextType, RequireFields<MutationTodosReorderedArgs, 'atIndex' | 'id'>>;
 }>;
 
 export type MutationResponseResolvers<ContextType = Context, ParentType extends ResolversParentTypes['MutationResponse'] = ResolversParentTypes['MutationResponse']> = ResolversObject<{
@@ -176,7 +187,7 @@ export type MutationResponseResolvers<ContextType = Context, ParentType extends 
 }>;
 
 export type QueryResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = ResolversObject<{
-  todos?: Resolver<Array<Maybe<ResolversTypes['Todo']>>, ParentType, ContextType>;
+  todos?: Resolver<Array<ResolversTypes['Todo']>, ParentType, ContextType>;
 }>;
 
 export type TodoResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Todo'] = ResolversParentTypes['Todo']> = ResolversObject<{

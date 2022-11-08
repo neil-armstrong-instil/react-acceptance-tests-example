@@ -1,13 +1,15 @@
 import type {TodoEnvironment} from "@src/dsl/todo/environments/base/TodoEnvironment";
 import {BasePlaywrightDriver} from "@src/dsl/shared/drivers/playwright/BasePlaywrightDriver";
 import type {PlaywrightWindow} from "@src/dsl/shared/environments/windows/playwright/PlaywrightWindow";
-import {TodosComponent} from "@src/dsl/todo/environments/driver/components/todos/TodosComponent";
+import {TodosComponent} from "@src/dsl/todo/environments/driver/playwright/components/todos/TodosComponent";
 import type {Todo} from "@src/dsl/todo/types/Todo";
-import {ToolbarComponent} from "@src/dsl/todo/environments/driver/components/toolbar/ToolbarComponent";
+import {ToolbarComponent} from "@src/dsl/todo/environments/driver/playwright/components/toolbar/ToolbarComponent";
 
 export class PlaywrightTodoEnvironment extends BasePlaywrightDriver implements TodoEnvironment {
   public todos!: TodosComponent;
   public toolbar!: ToolbarComponent;
+
+  private todoNameCounter = 1;
 
   constructor(playwrightWindow: PlaywrightWindow) {
     super(playwrightWindow);
@@ -30,12 +32,22 @@ export class PlaywrightTodoEnvironment extends BasePlaywrightDriver implements T
     return await this.todos.count();
   }
 
-  async create(): Promise<Todo> {
+  async create(textContent?: string): Promise<Todo> {
+    if (!textContent) textContent = `${this.todoNameCounter++}`;
+
     await this.toolbar.createTodo();
 
     const count = await this.todos.count();
-    const newestTodoAdded = this.todos.getTodoAtIndex(count - 1);
-    return newestTodoAdded.details();
+    return this.renameAtIndex(count - 1, textContent);
+  }
+
+  private async renameAtIndex(index: number, updatedText: string): Promise<Todo> {
+    const todo = this.todos.getTodoAtIndex(index);
+    await todo.text.click();
+    await todo.text.selectText();
+    await this.submitKeys(updatedText);
+
+    return await this.todos.getTodoAtIndex(todo.index).details();
   }
 
   async delete(todoToDelete: Todo): Promise<void> {

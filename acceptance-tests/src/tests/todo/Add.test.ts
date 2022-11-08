@@ -6,7 +6,7 @@ import {Todo} from "@src/dsl/todo/types/Todo";
 
 let Todo: TodoPage;
 
-runTestsOn(["Webapp", "Development", "Electron", "Android"], () => {
+runTestsOn(["Webapp", "Development", "Electron", "Android", "DeployedApi"], () => {
   beforeEach(async () => {
     Todo = await buildTodoPage();
   });
@@ -16,7 +16,7 @@ runTestsOn(["Webapp", "Development", "Electron", "Android"], () => {
       let newTodo: Todo;
 
       beforeEach(async () => {
-        newTodo = await Todo.create();
+        newTodo = await Todo.create("New todo!");
       });
 
       then("the new todo will be added", async() => {

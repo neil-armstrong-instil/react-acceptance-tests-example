@@ -8,16 +8,12 @@
     "checks": "yarn lint && yarn test",
     "lint": "yarn eslint --max-warnings=0 \"./src/**/*.{ts,tsx}\"",
     "test": "yarn jest test --passWithNoTests --watchAll=false --config jest.config.js",
-    "compile": "yarn clean && yarn ts-node -r tsconfig-paths/register scripts/Esbuild.ts && cp ./src/schema/schema.graphql ./dist/src/schema.graphql",
+    "compile": "yarn clean && yarn ts-node -r tsconfig-paths/register scripts/Esbuild.ts && cp ../shared/src/graphql/schema/schema.graphql ./dist/src/schema.graphql",
     "clean": "rimraf dist",
-    "test:e2e": "yarn jest test --passWithNoTests --watchAll=false --config jest.config.js",
-    "generate": "yarn graphql-codegen --config graphql-codegen.yaml"
+    "test:e2e": "yarn jest test --passWithNoTests --watchAll=false --config jest.config.js"
   },
   "devDependencies": {
     "@apollo/server": "4.1.1",
-    "@graphql-codegen/cli": "2.13.11",
-    "@graphql-codegen/typescript": "2.8.1",
-    "@graphql-codegen/typescript-resolvers": "2.7.6",
     "@types/jest": "29.1.2",
     "@types/lodash": "4.14.188",
     "@types/node": "18.11.9",

@@ -5,17 +5,13 @@ import {given, then, when} from "@src/dsl/shared/acceptance-criteria-mapping/Acc
 
 let Todo: TodoPage;
 
-runTestsOn(["Webapp", "Development", "Electron", "Android"], () => {
+runTestsOn(["Webapp", "Development", "Electron", "Android", "DeployedApi"], () => {
   beforeEach(async () => {
     Todo = await buildTodoPage();
   });
 
   given("a user wants a fresh page to add todos to", () => {
     when("the page is navigated to for the first time", () => {
-      beforeEach(async () => {
-        await Todo.navigateToPage();
-      });
-
       then("the todo list will be empty", async() => {
         const count = await Todo.count();
 

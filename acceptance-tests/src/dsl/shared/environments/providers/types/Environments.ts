@@ -2,4 +2,5 @@ export type Environment =
   | "Development"
   | "Electron"
   | "Android"
-  | "Webapp";
+  | "Webapp"
+  | "DeployedApi";

@@ -1,2 +1,4 @@
 config/jest.config.base.js
 jest.config.js
+**/__generated__/resolvers-types.ts
+

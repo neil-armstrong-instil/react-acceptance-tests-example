@@ -1,5 +1,5 @@
-import type {MutationResolvers} from "@src/schema/__generated__/resolvers-types";
-import {MutationResult} from "@src/schema/__generated__/resolvers-types";
+import type {MutationResolvers} from "@shared/graphql/schema/__generated__/resolvers-types";
+import {MutationResult} from "@shared/graphql/schema/__generated__/resolvers-types";
 
 export const todoDeleted: MutationResolvers["todoDeleted"] = (parent, {id}, {database}) => {
   try {

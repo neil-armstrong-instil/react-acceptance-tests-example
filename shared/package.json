@@ -5,9 +5,13 @@
     "build": "yarn checks",
     "checks": "yarn lint && yarn test",
     "lint": "yarn eslint --max-warnings=0 \"./src/**/*.ts\"",
-    "test": "yarn jest --passWithNoTests"
+    "test": "yarn jest --passWithNoTests",
+    "generate": "yarn graphql-codegen --config ./graphql-codegen.yaml"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "2.13.11",
+    "@graphql-codegen/typescript": "2.8.1",
+    "@graphql-codegen/typescript-resolvers": "2.7.6",
     "@types/jest": "29.1.2",
     "@types/node": "18.11.9",
     "@typescript-eslint/eslint-plugin": "5.40.1",

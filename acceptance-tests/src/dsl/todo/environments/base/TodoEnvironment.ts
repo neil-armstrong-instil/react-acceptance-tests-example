@@ -5,9 +5,9 @@ export interface TodoEnvironment extends BaseEnvironment {
   refreshEnvironment(): Promise<void>;
 
   count(): Promise<number>;
-  create(): Promise<Todo>;
+  create(textContent?: string): Promise<Todo>;
   delete(todoToDelete: Todo): Promise<void>;
-  rename(todoToDelete: Todo, updatedText: string): Promise<Todo>;
+  rename(todoToRename: Todo, updatedText: string): Promise<Todo>;
   dropOnto(toDrag: Todo, toDropOnto: Todo): Promise<void>;
   getAtIndex(index: number): Promise<Todo>;
 }

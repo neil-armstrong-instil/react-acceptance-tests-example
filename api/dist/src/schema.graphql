@@ -1,11 +1,12 @@
 type Query {
-    todos: [Todo]!
+    todos: [Todo!]!
 }
 
 type Mutation {
-    todosReordered(newOrderAsIds: [String!]!): MutationResponse!
+    todosReordered(id: String!, atIndex: Int!): MutationResponse!
     todoAdded(newTodo: TodoInput!): TodoAddedMutationResponse!
     todoDeleted(id: String!): MutationResponse!
+    todoUpdated(id: String!, todoUpdate: TodoInput!): MutationResponse!
 }
 
 type Todo {

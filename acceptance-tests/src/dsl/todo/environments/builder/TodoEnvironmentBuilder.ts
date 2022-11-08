@@ -1,9 +1,10 @@
 import type {TodoEnvironment} from "@src/dsl/todo/environments/base/TodoEnvironment";
 import {currentEnvironment} from "@src/dsl/shared/environments/providers/EnvironmentProvider";
-import {DevelopmentSystemDesignEnvironment} from "@src/dsl/todo/environments/DevelopmentSystemDesignEnvironment";
-import {ElectronSystemDesignEnvironment} from "@src/dsl/todo/environments/ElectronSystemDesignEnvironment";
-import {WebappSystemDesignEnvironment} from "@src/dsl/todo/environments/WebappSystemDesignEnvironment";
-import {AndroidSystemDesignEnvironment} from "@src/dsl/todo/environments/AndroidSystemDesignEnvironment";
+import {DevelopmentTodoEnvironment} from "@src/dsl/todo/environments/DevelopmentTodoEnvironment";
+import {ElectronTodoEnvironment} from "@src/dsl/todo/environments/ElectronTodoEnvironment";
+import {WebappTodoEnvironment} from "@src/dsl/todo/environments/WebappTodoEnvironment";
+import {AndroidTodoEnvironment} from "@src/dsl/todo/environments/AndroidTodoEnvironment";
+import {DeployedApiTodoEnvironment} from "@src/dsl/todo/environments/DeployedApiTodoEnvironment";
 
 export async function buildEnvironment(): Promise<TodoEnvironment> {
   const environment = getEnvironment();
@@ -15,13 +16,15 @@ export function getEnvironment(): TodoEnvironment {
   const environment = currentEnvironment();
   switch (environment) {
     case "Webapp":
-      return new WebappSystemDesignEnvironment();
+      return new WebappTodoEnvironment();
     case "Development":
-      return new DevelopmentSystemDesignEnvironment();
+      return new DevelopmentTodoEnvironment();
     case "Electron":
-      return new ElectronSystemDesignEnvironment();
+      return new ElectronTodoEnvironment();
     case "Android":
-      return new AndroidSystemDesignEnvironment();
+      return new AndroidTodoEnvironment();
+    case "DeployedApi":
+      return new DeployedApiTodoEnvironment();
     default:
       throw new Error(`Environment'${environment}' is not setup yet for Todo`);
   }

@@ -1,4 +1,4 @@
-import {Database} from "@src/database/Database";
+import {Database} from "@shared/graphql/database/Database";
 
 interface ActiveDatabases {
   [id: string]: Database;
@@ -6,11 +6,12 @@ interface ActiveDatabases {
 
 const activeDatabases: ActiveDatabases = {};
 
-export function getActiveDatabase(id: string): Database {
+export function getDatabase(id: string): Database {
   let activeDatabase = activeDatabases[id];
   if (!activeDatabase) {
+    console.log("No database for", id);
     activeDatabase = new Database();
-    activeDatabases[id] = new Database();
+    activeDatabases[id] = activeDatabase;
   }
 
   return activeDatabase;
@@ -21,4 +22,5 @@ export function clearActiveDatabases(): void {
   for (const key of keys) {
     delete activeDatabases[key];
   }
+  console.log("Databases cleared");
 }

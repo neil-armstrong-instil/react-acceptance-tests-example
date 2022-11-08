@@ -1,9 +1,9 @@
-import type {MutationResolvers} from "@src/schema/__generated__/resolvers-types";
-import {MutationResult} from "@src/schema/__generated__/resolvers-types";
+import type {MutationResolvers} from "@shared/graphql/schema/__generated__/resolvers-types";
+import {MutationResult} from "@shared/graphql/schema/__generated__/resolvers-types";
 
-export const todosReordered: MutationResolvers["todosReordered"] = (parent, {newOrderAsIds}, {database}) => {
+export const todosReordered: MutationResolvers["todosReordered"] = (parent, {id, atIndex}, {database}) => {
   try {
-    database.reorderTodos(newOrderAsIds);
+    database.reorderTodos(id, atIndex);
 
     return {
       result: MutationResult.Success
@@ -12,7 +12,7 @@ export const todosReordered: MutationResolvers["todosReordered"] = (parent, {new
     console.error(error);
     return {
       result: MutationResult.Failure,
-      message: "Failed to delete todo"
+      message: "Failed to reorder todos"
     };
   }
 };

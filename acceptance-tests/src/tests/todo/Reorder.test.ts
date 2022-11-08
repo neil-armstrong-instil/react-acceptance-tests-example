@@ -6,7 +6,7 @@ import {Todo} from "@src/dsl/todo/types/Todo";
 
 let Todo: TodoPage;
 
-runTestsOn(["Webapp", "Development", "Electron", "Android"], () => {
+runTestsOn(["Webapp", "Development", "Electron", "Android", "DeployedApi"], () => {
   beforeEach(async () => {
     Todo = await buildTodoPage();
   });
@@ -41,8 +41,8 @@ runTestsOn(["Webapp", "Development", "Electron", "Android"], () => {
         });
 
         then("the todo list will be updated", async () => {
-          expect(await Todo.getAtIndex(0)).toEqual(todo1);
-          expect(await Todo.getAtIndex(1)).toEqual(todo3);
+          expect(await Todo.getAtIndex(0)).toEqual(todo3);
+          expect(await Todo.getAtIndex(1)).toEqual(todo1);
           expect(await Todo.getAtIndex(2)).toEqual(todo2);
         });
       });

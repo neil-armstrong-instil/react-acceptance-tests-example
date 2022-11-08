@@ -21,9 +21,9 @@ export class TodoPage extends BaseDsl<TodoEnvironment> {
     }
   }
 
-  async create(): Promise<Todo> {
+  async create(textContent?: string): Promise<Todo> {
     try {
-      return this.environment.create();
+      return this.environment.create(textContent);
     } catch (error) {
       throw new DslError("Failed to create a todo", error);
     }

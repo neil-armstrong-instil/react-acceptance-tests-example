@@ -1,7 +1,7 @@
 import {BaseComponent} from "@src/dsl/shared/drivers/playwright/types/BaseComponent";
 import type {Page} from "playwright-core";
 import type {Locator} from "@playwright/test";
-import {TodoComponent} from "@src/dsl/todo/environments/driver/components/todos/components/TodoComponent";
+import {TodoComponent} from "@src/dsl/todo/environments/driver/playwright/components/todos/components/TodoComponent";
 import {repeatMap} from "@shared/stdlib/Loops";
 
 export class TodosComponent extends BaseComponent {

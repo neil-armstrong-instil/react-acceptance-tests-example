@@ -6,7 +6,7 @@ import {Todo} from "@src/dsl/todo/types/Todo";
 
 let Todo: TodoPage;
 
-runTestsOn(["Webapp", "Development", "Electron", "Android"], () => {
+runTestsOn(["Webapp", "Development", "Electron", "Android", "DeployedApi"], () => {
   beforeEach(async () => {
     Todo = await buildTodoPage();
   });

@@ -1,15 +1,14 @@
 import {ApolloServer} from "@apollo/server";
 import {startStandaloneServer} from "@apollo/server/standalone";
-import {typeDefs} from "./schema/Typedefs";
+import {typeDefs} from "@shared/graphql/schema/Typedefs";
 import {resolvers} from "./resolvers/Resolvers";
-import type {Context} from "@src/context/Context";
-import {getActiveDatabase} from "@src/database/ActiveDatabases";
+import type {Context} from "@shared/graphql/context/Context";
 import {scheduleDatabaseClearJob} from "@src/cron/DatabaseClearJob";
+import {getDatabase} from "@shared/graphql/database/ActiveDatabases";
 
 const server = new ApolloServer<Context>({
   typeDefs,
-  resolvers,
-  csrfPrevention: false
+  resolvers
 });
 
 startStandaloneServer<Context>(server, {
@@ -17,10 +16,10 @@ startStandaloneServer<Context>(server, {
     port: 4000
   },
   context: ({req}) => {
-    const userId = req.headers?.cookie?.[0] ?? req.headers?.["user-agent"] ?? "default";
+    const userId = req.headers?.userid as (string | undefined) ?? req.headers?.["user-agent"] ?? "default";
 
     return Promise.resolve({
-      database: getActiveDatabase(userId)
+      database: getDatabase(userId)
     });
   }
 }).then(onStart);

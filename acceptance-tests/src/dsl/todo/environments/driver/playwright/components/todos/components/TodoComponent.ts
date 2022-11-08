@@ -31,6 +31,6 @@ export class TodoComponent extends BaseComponent {
   }
 
   async dragToTodo(to: TodoComponent): Promise<void> {
-    await this.dragTo(to.container);
+    await this.dragAndDrop(this.container, to.container);
   }
 }
