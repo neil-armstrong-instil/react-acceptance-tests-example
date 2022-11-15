@@ -5,8 +5,8 @@ services:
     repo: https://github.com/neil-armstrong-instil/react-acceptance-tests-example
     branch: main
     rootDir: webapp
-    buildCommand: yarn install && yarn compile
-    staticPublishPath: ./build
+    buildCommand: cd webapp && yarn install && yarn compile
+    staticPublishPath: ./webapp/build
   - type: web
     name: acceptance-test-example-api
     env: node
@@ -14,5 +14,5 @@ services:
     repo: https://github.com/neil-armstrong-instil/react-acceptance-tests-example
     branch: main
     rootDir: api
-    buildCommand: yarn install && yarn compile
-    startCommand: yarn start:prod
+    buildCommand: cd api && yarn install && yarn compile
+    startCommand: cd api && yarn start:prod
