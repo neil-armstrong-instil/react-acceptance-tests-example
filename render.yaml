@@ -8,7 +8,7 @@ services:
     buildCommand: yarn install && yarn compile
     staticPublishPath: ./build
   - type: web
-    name: acceptance-test-example-webapp
+    name: acceptance-test-example-api
     env: node
     plan: free
     repo: https://github.com/neil-armstrong-instil/react-acceptance-tests-example
