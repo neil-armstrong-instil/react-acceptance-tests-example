@@ -2,6 +2,7 @@ services:
   - type: web
     name: acceptance-test-example-webapp
     env: static
+    plan: free
     repo: https://github.com/neil-armstrong-instil/react-acceptance-tests-example
     branch: main
     rootDir: webapp
