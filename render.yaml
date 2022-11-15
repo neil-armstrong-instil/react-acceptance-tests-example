@@ -16,3 +16,4 @@ services:
     rootDir: api
     buildCommand: yarn install && yarn compile
     startCommand: yarn start:prod
+    healthCheckPath: /
