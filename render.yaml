@@ -15,4 +15,4 @@ services:
     branch: main
     rootDir: api
     buildCommand: yarn install && yarn compile
-    runCommand: yarn start:prod
+    startCommand: yarn start:prod
