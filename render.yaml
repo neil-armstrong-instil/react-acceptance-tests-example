@@ -7,6 +7,7 @@ services:
     rootDir: webapp
     buildCommand: yarn install && yarn compile
     staticPublishPath: ./webapp/build
+
   - type: web
     name: acceptance-test-example-api
     env: node
@@ -16,4 +17,6 @@ services:
     rootDir: api
     buildCommand: yarn install && yarn compile
     startCommand: yarn start:prod
-    healthCheckPath: /
+    envVars:
+    - key: PORT
+      value: 4000
