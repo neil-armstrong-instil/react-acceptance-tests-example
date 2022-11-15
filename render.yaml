@@ -6,7 +6,7 @@ services:
     branch: main
     rootDir: webapp
     buildCommand: tsc && vite build
-    staticPublishPath: ./webapp/build
+    staticPublishPath: ./build
 
   - type: web
     name: acceptance-test-example-api
