@@ -27,7 +27,7 @@ jobs:
         run: yarn package
 
       - name: Try to run electron package directly
-        run: electron/dist/linux-unpacked/acceptance-test-example-electron
+        run: sudo apt-get install xorg openbox && electron/dist/linux-unpacked/acceptance-test-example-electron
 
       - name: Run acceptance tests
         run: yarn workspace acceptance-test-example-acceptance-tests acceptance-tests
