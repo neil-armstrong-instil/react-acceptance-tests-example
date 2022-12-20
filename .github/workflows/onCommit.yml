@@ -33,6 +33,8 @@ jobs:
         run: yarn workspace acceptance-test-example-acceptance-tests setup
 
       - name: Check deployments
+        env:
+          RENDER_APIKEY: ${{secrets.RENDER_APIKEY}}
         run: yarn checkDeployments
 
       - name: Run acceptance tests
