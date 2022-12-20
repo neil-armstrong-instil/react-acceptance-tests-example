@@ -13,8 +13,11 @@ export function runTestsOn(
     // No need to run "development" tests on CI as it'll be pointing at the deployed webapp instead
     if (process.env.CI && environment === "Development") return;
 
-    // TODO: Remove this when api is actually deployed
-    if (process.env.CI && environment === "DeployedApi") return;
+    // TODO: Enable again when Android works on CI
+    if (process.env.CI && environment === "Android") return;
+
+    // TODO: Enable again when Electron works on CI
+    if (process.env.CI && environment === "Electron") return;
 
     // eslint-disable-next-line jest/valid-describe-callback,jest/valid-title
     describe(environment, () => {
