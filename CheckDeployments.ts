@@ -1,5 +1,4 @@
 import axios from "axios";
-import {execSync} from "child_process";
 
 const apiToken = process.env.RENDER_APIKEY;
 if (!apiToken) {
@@ -22,38 +21,32 @@ interface Deployment {
 }
 
 async function checkDeployments(): Promise<void> {
-  console.log("Checking deployments to 'render'...\n");
+  console.log("Checking deployments to 'render.com'...\n");
 
-  try {
-    const webappServiceId = "srv-cdqc0larrk09t4b2bd50";
-    await waitForDeployment(webappServiceId);
-  } catch (error) {
-    console.error("Webapp deployment failed ❌ ");
-    throw error;
-  }
-  console.log("Webapp deployment successful ✅ ");
+  await waitForDeployment("Webapp", "srv-cdqc0larrk09t4b2bd50");
+  await waitForDeployment("API", "srv-cdqc0larrk09t4b2bd40");
 
-  try {
-    const apiServiceId = "srv-cdqc0larrk09t4b2bd40";
-    await waitForDeployment(apiServiceId);
-  } catch (error) {
-    console.error("Api deployment failed ❌ ");
-    throw error;
-  }
-  console.log("API deployment successful ✅ ");
-
-  console.log("\nAll deployments successful");
+  console.log("All deployments successful!");
 }
 
-async function waitForDeployment(webappServiceId: string): Promise<void> {
+async function waitForDeployment(deploymentName: string, webappServiceId: string): Promise<void> {
   const fiveMinutes = 300000;
+  process.stdout.write(`Checking ${deploymentName} deployment...`);
 
-  await waitFor(async () => {
-    const webappDeployment = await getLatestDeployment(webappServiceId);
-    if (webappDeployment.deploy.status !== "live") {
-      throw new Error("Deployment still not live");
-    }
-  }, fiveMinutes, 100);
+  try {
+    await waitFor(async () => {
+      const latestDeployment = await getLatestDeployment(webappServiceId);
+      if (latestDeployment.deploy.status !== "live") {
+        process.stdout.write(".");
+        throw new Error("Deployment still not live");
+      }
+    }, fiveMinutes, 1000);
+  } catch (error) {
+    console.error(`\n${deploymentName} deployment failed ❌ `);
+    throw error;
+  }
+
+  console.log(`\n${deploymentName} deployment successful ✅ \n`);
 }
 
 async function getLatestDeployment(serviceId: string): Promise<Deployment> {
@@ -69,28 +62,11 @@ async function getLatestDeployment(serviceId: string): Promise<Deployment> {
   }
 
   const deployments = response.data as Deployment[];
-  const latestDeployment = deployments.find(deployment => {
-    const commitDetails = deployment.deploy.commit;
-    if (!commitDetails) return false;
+  if (deployments.length === 0) {
+    throw new Error("Could not find any deployments");
+  }
 
-    return commitDetails.id === getLatestCommitHash();
-  });
-  if (!latestDeployment) throw new Error(`Could not find deployment with commit hash ${getLatestCommitHash()}`);
-
-  return latestDeployment;
-}
-
-const getLatestCommitHash = buildLatestCommitHashFetcher();
-
-function buildLatestCommitHashFetcher(): () => string {
-  let commitHash: string | undefined = undefined;
-
-  return () => {
-    if (commitHash) return commitHash;
-
-    commitHash = execSync("git rev-parse HEAD").toString().trim();
-    return commitHash;
-  };
+  return deployments[0];
 }
 
 export async function waitFor(callback: () => Promise<void>, timeout = 1000, interval = 100): Promise<void> {
