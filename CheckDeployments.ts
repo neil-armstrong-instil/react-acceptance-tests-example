@@ -2,7 +2,7 @@ import axios from "axios";
 import {execSync} from "child_process";
 
 const apiToken = process.env.RENDER_APIKEY;
-console.log(Object.keys(process.env).find(key => key.toLowerCase().includes("render")));
+console.log(process.env.GITHUB_ENV.slice(0, 5));
 if (!apiToken) throw new Error("Could not get render api key");
 
 interface Deployment {
