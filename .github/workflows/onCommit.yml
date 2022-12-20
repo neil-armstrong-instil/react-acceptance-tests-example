@@ -17,8 +17,8 @@ jobs:
 #        uses: ./.github/reusable-actions/check-project
 
       # TODO: Delete below
-      - name: Install xserver
-        run: sudo apt-get update && sudo apt-get install xorg openbox
+      - name: Install gui
+        run: sudo apt-get update && sudo apt-get install ubuntu-desktop
 
       - name: Install playwright dependencies
         run: yarn workspace acceptance-test-example-acceptance-tests setup
