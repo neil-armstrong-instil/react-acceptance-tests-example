@@ -2,6 +2,6 @@ import {BrowserTodoEnvironment} from "./BrowserTodoEnvironment";
 
 export class WebappTodoEnvironment extends BrowserTodoEnvironment {
   constructor() {
-    super("https://webapp-u3oy.onrender.com/");
+    super("https://acceptance-test-example-webapp.onrender.com");
   }
 }
