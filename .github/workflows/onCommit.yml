@@ -13,8 +13,8 @@ jobs:
       - name: Setup project
         uses: ./.github/reusable-actions/setup-project
 
-      - name: Run checks
-        uses: ./.github/reusable-actions/check-project
+#      - name: Run checks
+#        uses: ./.github/reusable-actions/check-project
 
       - name: Check deployments
         run: yarn checkDeployments

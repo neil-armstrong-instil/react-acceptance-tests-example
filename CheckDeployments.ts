@@ -1,6 +1,10 @@
 import axios from "axios";
 import {execSync} from "child_process";
 
+const apiToken = process.env.RENDER_APIKEY;
+console.log(Object.keys(process.env));
+if (!apiToken) throw new Error("Could not get render api key");
+
 interface Deployment {
   deploy: {
     id: string;
@@ -50,9 +54,6 @@ async function waitForDeployment(webappServiceId: string): Promise<void> {
 }
 
 async function getLatestDeployment(serviceId: string): Promise<Deployment> {
-  const apiToken = process.env.RENDER_APIKEY;
-  if (!apiToken) throw new Error("Could not get render api key");
-
   const response = await axios.get(`https://api.render.com/v1/services/${serviceId}/deploys?limit=20`, {
     headers: {
       accept: "application/json",
