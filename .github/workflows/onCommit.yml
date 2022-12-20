@@ -27,7 +27,7 @@ jobs:
         run: yarn package
 
       - name: Print electron dist
-        run: ls electron/dist/
+        run: ls electron/dist/linux-unpacked
 
       - name: Run acceptance tests
         run: yarn workspace acceptance-test-example-acceptance-tests acceptance-tests
