@@ -16,6 +16,19 @@ jobs:
       - name: Run checks
         uses: ./.github/reusable-actions/check-project
 
+      # TODO: Delete below
+      - name: Install playwright dependencies
+        run: yarn workspace acceptance-test-example-acceptance-tests setup
+
+      - name: Sync webapp
+        run: yarn workspace acceptance-test-example-webapp compile && yarn sync-webapp
+
+      - name: Package application
+        run: yarn package
+
+      - name: Run acceptance tests
+        run: yarn workspace acceptance-test-example-acceptance-tests acceptance-tests
+
   acceptanceTests:
     needs: commitChecks
     if: github.ref == 'refs/heads/main'
@@ -31,6 +44,12 @@ jobs:
 
       - name: Install playwright dependencies
         run: yarn workspace acceptance-test-example-acceptance-tests setup
+
+      - name: Sync webapp
+        run: yarn workspace acceptance-test-example-webapp compile && yarn sync-webapp
+
+      - name: Package application
+        run: yarn package
 
       - name: Check deployments
         env:
