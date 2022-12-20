@@ -31,10 +31,10 @@ jobs:
       - name: Package application
         run: yarn package
 
-      - name: Try to run electron package directly
-        env:
-          DISPLAY: :0
-        run: xvfb-run --auto-servernum electron/dist/linux-unpacked/acceptance-test-example-electron
+#      - name: Try to run electron package directly
+#        env:
+#          DISPLAY: :0
+#        run: xvfb-run --auto-servernum electron/dist/linux-unpacked/acceptance-test-example-electron
 
       - name: Run acceptance tests
         run: yarn workspace acceptance-test-example-acceptance-tests acceptance-tests
