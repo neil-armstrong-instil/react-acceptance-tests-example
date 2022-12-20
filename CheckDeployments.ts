@@ -3,7 +3,6 @@ import {execSync} from "child_process";
 
 const apiToken = process.env.RENDER_APIKEY;
 if (!apiToken) {
-  console.log("github environment: ", process.env.GITHUB_ENV?.slice(0, 10));
   throw new Error("Could not get render api key");
 }
 
@@ -64,7 +63,6 @@ async function getLatestDeployment(serviceId: string): Promise<Deployment> {
   });
 
   if (response.status !== 200) {
-    console.log(response);
     throw new Error("Failed to get deployments");
   }
 

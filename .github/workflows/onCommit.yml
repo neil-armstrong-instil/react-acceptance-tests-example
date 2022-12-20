@@ -17,6 +17,8 @@ jobs:
 #        uses: ./.github/reusable-actions/check-project
 
       - name: Check deployments
+        env:
+          RENDER_APIKEY: ${{secrets.RENDER_APIKEY}}
         run: yarn checkDeployments
 
   acceptanceTests:
