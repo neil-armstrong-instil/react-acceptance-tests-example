@@ -3,7 +3,7 @@ import {execSync} from "child_process";
 
 const apiToken = process.env.RENDER_APIKEY;
 if (!apiToken) {
-  console.log("first five characters", process.env.GITHUB_ENV?.slice(0, 5));
+  console.log("github environment: ", process.env.GITHUB_ENV?.slice(0, 10));
   throw new Error("Could not get render api key");
 }
 
