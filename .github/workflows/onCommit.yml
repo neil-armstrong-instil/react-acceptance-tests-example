@@ -13,13 +13,8 @@ jobs:
       - name: Setup project
         uses: ./.github/reusable-actions/setup-project
 
-#      - name: Run checks
-#        uses: ./.github/reusable-actions/check-project
-
-      - name: Check deployments
-        env:
-          RENDER_APIKEY: ${{secrets.RENDER_APIKEY}}
-        run: yarn checkDeployments
+      - name: Run checks
+        uses: ./.github/reusable-actions/check-project
 
   acceptanceTests:
     needs: commitChecks

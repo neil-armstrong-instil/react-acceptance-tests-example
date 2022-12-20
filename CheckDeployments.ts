@@ -46,12 +46,14 @@ async function checkDeployments(): Promise<void> {
 }
 
 async function waitForDeployment(webappServiceId: string): Promise<void> {
+  const fiveMinutes = 300000;
+
   await waitFor(async () => {
     const webappDeployment = await getLatestDeployment(webappServiceId);
     if (webappDeployment.deploy.status !== "live") {
       throw new Error("Deployment still not live");
     }
-  }, 5000, 100);
+  }, fiveMinutes, 100);
 }
 
 async function getLatestDeployment(serviceId: string): Promise<Deployment> {
