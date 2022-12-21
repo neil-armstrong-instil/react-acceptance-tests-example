@@ -38,9 +38,17 @@ export async function takeScreenshot(screenshotFileName: string): Promise<void> 
 }
 
 export async function cleanupElectron(): Promise<void> {
-  await page?.close();
+  try {
+    await page?.close();
+  } catch (error) {
+    console.warn("Closing page failed", error);
+  }
   page = undefined;
 
-  await electronApp?.close();
+  try {
+    await electronApp?.close();
+  } catch (error) {
+    console.warn("Closing electron failed", error);
+  }
   electronApp = undefined;
 }
