@@ -1,4 +1,4 @@
-import {platform, arch} from "os";
+import {arch, platform} from "os";
 import {isArm64} from "@src/utils/platform/TestRunnerCpuArchitecture";
 
 export function localElectronExecutablePath(): string {
