@@ -38,10 +38,21 @@ jobs:
       - name: Package application
         run: yarn package
 
-      - name: Check deployments
+      - name: Check Webapp deployment
+        uses: neil-armstrong-instil/render-deployment-checker@v1
         env:
           RENDER_APIKEY: ${{secrets.RENDER_APIKEY}}
-        run: yarn checkDeployments
+        with:
+          serviceId: "srv-cdqc0larrk09t4b2bd50"
+          deploymentName: "Webapp"
+
+      - name: Check API deployment
+        uses: neil-armstrong-instil/render-deployment-checker@v1
+        env:
+          RENDER_APIKEY: ${{secrets.RENDER_APIKEY}}
+        with:
+          serviceId: "srv-cdqc0larrk09t4b2bd40"
+          deploymentName: "API"
 
       - name: Install x11 gui
         run: |
