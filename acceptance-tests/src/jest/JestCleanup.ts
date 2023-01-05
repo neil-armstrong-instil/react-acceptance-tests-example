@@ -14,25 +14,18 @@ afterAll(async () => {
 });
 
 afterEach(async () => {
-  const testDetails = getCurrentlyExecutingTestDetails();
+  const testDetails = getTestDetailsWhenFailure();
   if (!testDetails) return;
-  if (!testDetails.errors || testDetails.errors.length === 0) return;
 
   const screenshotPath = `${extractFilePath()}/${extractTestName(testDetails)}`;
 
   await takeScreenshot(screenshotPath);
 });
 
-function getCurrentlyExecutingTestDetails(): Circus.TestEntry | undefined {
-  const allSymbolsOnGlobal: symbol[] = Object.getOwnPropertySymbols(global);
-  const jestStateSymbol = allSymbolsOnGlobal.find(symbol => symbol.description === "JEST_STATE_SYMBOL");
-  if (!jestStateSymbol) return;
-
+function getTestDetailsWhenFailure(): Circus.TestEntry | undefined {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  const jestState = global[jestStateSymbol] as Circus.State;
-
-  return jestState.currentlyRunningTest ?? undefined;
+  return global["acceptance-test-failed-test-details"];
 }
 
 function extractFilePath(): string {

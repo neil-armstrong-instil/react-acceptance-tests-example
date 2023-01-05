@@ -6,4 +6,5 @@ module.exports = {
   setupFilesAfterEnv: [
     "./src/jest/JestCleanup.ts"
   ],
+  testEnvironment: "./src/jest/TestRunner.ts"
 };
