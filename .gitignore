@@ -84,4 +84,4 @@ storybook-static/
 # Actions testing
 .github/*.zip
 
-DesignSync.config.json
+FigmaSync.config.ts

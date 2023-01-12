@@ -1,4 +1,12 @@
 # Acceptance test example
+An example of the following techniques:
+- UI driven development via "acceptance tests" using Playwright
+- UI testing a webapp on multiple different platforms: browser, Electron, Android
+- Sharing code between webapp, tests, Electron
+- Using figma-sync to share styles between Figma and the browser
+- Drag and drop, along with how to test it in Playwright
+
+The (very crude) Figma design used can be found here: https://www.figma.com/file/4FqjOyGsXBVaZ7q0t0tA54/Design-System-Example?node-id=2%3A1089&t=NyCFVJj0sPYcSyie-0
 
 ## Quickstart
 
@@ -21,13 +29,7 @@
 
 This will install android avd for acceptance tests, gradle for android, package everything up, etc
 
-## TODO
-- Deploy application to showcase Webapp tests
-- Deploy API to showcase API tests (so not using playwright)
-- Get reordering working to show case playwrights drag and drop capabilities
-
 ## Debugging
 
 ### Webstorm ESLint: "TypeError: this.cliEngineCtor is not a constructor"
 Upgrade Webstorm to latest version, or at least `2021.3.1`
-

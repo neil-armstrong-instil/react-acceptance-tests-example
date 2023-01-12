@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./components/app/App";
-import "./components/app/index.css";
 
 const rootElement = document.getElementById("root");
 if (!rootElement) throw Error("Could not find root element of 'index.html'");

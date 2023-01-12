@@ -1,0 +1,17 @@
+@use "../../../../../../../generated/scss/ColorHelpers";
+@use "../../../../../../../generated/scss/TypographyHelpers";
+
+.todo__textInput {
+  border: none;
+  outline: none;
+  background: ColorHelpers.useColor("Primary/Light/20");
+  @include TypographyHelpers.useFont("Display XS/Desktop Medium");
+
+  &:hover {
+    background: ColorHelpers.useColor("Primary/Light/30");
+  }
+
+  &:focus {
+    background: ColorHelpers.useColor("Primary/Light/40");
+  }
+}

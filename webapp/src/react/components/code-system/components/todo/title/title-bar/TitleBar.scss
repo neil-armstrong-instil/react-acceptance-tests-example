@@ -1,0 +1,7 @@
+@use "../../../../../../../generated/scss/ColorHelpers";
+
+.todo__titleBar {
+  height: fit-content;
+  padding: 5px;
+  background: ColorHelpers.useColor("Primary/Light/10");
+}

@@ -1,0 +1,294 @@
+
+$fonts-display-1-xl-desktop-medium-family: Comic Sans MS, ComicSansMS-Bold !default;
+$fonts-display-1-xl-desktop-medium-lineheight: 56px !default;
+$fonts-display-1-xl-desktop-medium-size: 58px !default;
+$fonts-display-1-xl-desktop-medium-spacing: 0px !default;
+$fonts-display-1-xl-desktop-medium-weight: 700 !default;
+$fonts-display-1-xl-desktop-regular-family: Comic Sans MS, ComicSansMS !default;
+$fonts-display-1-xl-desktop-regular-lineheight: 56px !default;
+$fonts-display-1-xl-desktop-regular-size: 58px !default;
+$fonts-display-1-xl-desktop-regular-spacing: 0px !default;
+$fonts-display-1-xl-desktop-regular-weight: 400 !default;
+$fonts-display-2-xl-desktop-medium-family: Comic Sans MS, ComicSansMS-Bold !default;
+$fonts-display-2-xl-desktop-medium-lineheight: 72px !default;
+$fonts-display-2-xl-desktop-medium-size: 74px !default;
+$fonts-display-2-xl-desktop-medium-spacing: 0px !default;
+$fonts-display-2-xl-desktop-medium-weight: 700 !default;
+$fonts-display-2-xl-desktop-regular-family: Comic Sans MS, ComicSansMS !default;
+$fonts-display-2-xl-desktop-regular-lineheight: 72px !default;
+$fonts-display-2-xl-desktop-regular-size: 74px !default;
+$fonts-display-2-xl-desktop-regular-spacing: 0px !default;
+$fonts-display-2-xl-desktop-regular-weight: 400 !default;
+$fonts-display-l-desktop-medium-family: Comic Sans MS, ComicSansMS-Bold !default;
+$fonts-display-l-desktop-medium-lineheight: 36px !default;
+$fonts-display-l-desktop-medium-size: 36px !default;
+$fonts-display-l-desktop-medium-spacing: 0px !default;
+$fonts-display-l-desktop-medium-weight: 700 !default;
+$fonts-display-l-desktop-regular-family: Comic Sans MS, ComicSansMS !default;
+$fonts-display-l-desktop-regular-lineheight: 36px !default;
+$fonts-display-l-desktop-regular-size: 36px !default;
+$fonts-display-l-desktop-regular-spacing: 0px !default;
+$fonts-display-l-desktop-regular-weight: 400 !default;
+$fonts-display-m-desktop-medium-family: Comic Sans MS, ComicSansMS-Bold !default;
+$fonts-display-m-desktop-medium-lineheight: 32px !default;
+$fonts-display-m-desktop-medium-size: 32px !default;
+$fonts-display-m-desktop-medium-spacing: 0px !default;
+$fonts-display-m-desktop-medium-weight: 700 !default;
+$fonts-display-m-desktop-regular-family: Comic Sans MS, ComicSansMS !default;
+$fonts-display-m-desktop-regular-lineheight: 32px !default;
+$fonts-display-m-desktop-regular-size: 32px !default;
+$fonts-display-m-desktop-regular-spacing: 0px !default;
+$fonts-display-m-desktop-regular-weight: 400 !default;
+$fonts-display-s-desktop-medium-family: Comic Sans MS, ComicSansMS-Bold !default;
+$fonts-display-s-desktop-medium-lineheight: 28px !default;
+$fonts-display-s-desktop-medium-size: 26px !default;
+$fonts-display-s-desktop-medium-spacing: 0px !default;
+$fonts-display-s-desktop-medium-weight: 700 !default;
+$fonts-display-s-desktop-regular-family: Comic Sans MS, ComicSansMS !default;
+$fonts-display-s-desktop-regular-lineheight: 28px !default;
+$fonts-display-s-desktop-regular-size: 26px !default;
+$fonts-display-s-desktop-regular-spacing: 0px !default;
+$fonts-display-s-desktop-regular-weight: 400 !default;
+$fonts-display-xl-desktop-medium-family: Comic Sans MS, ComicSansMS-Bold !default;
+$fonts-display-xl-desktop-medium-lineheight: 44px !default;
+$fonts-display-xl-desktop-medium-size: 46px !default;
+$fonts-display-xl-desktop-medium-spacing: 0px !default;
+$fonts-display-xl-desktop-medium-weight: 700 !default;
+$fonts-display-xl-desktop-regular-family: Comic Sans MS, ComicSansMS !default;
+$fonts-display-xl-desktop-regular-lineheight: 44px !default;
+$fonts-display-xl-desktop-regular-size: 46px !default;
+$fonts-display-xl-desktop-regular-spacing: 0px !default;
+$fonts-display-xl-desktop-regular-weight: 400 !default;
+$fonts-display-xs-desktop-medium-family: Comic Sans MS, ComicSansMS-Bold !default;
+$fonts-display-xs-desktop-medium-lineheight: 24px !default;
+$fonts-display-xs-desktop-medium-size: 20px !default;
+$fonts-display-xs-desktop-medium-spacing: 0px !default;
+$fonts-display-xs-desktop-medium-weight: 700 !default;
+$fonts-display-xs-desktop-regular-family: Comic Sans MS, ComicSansMS !default;
+$fonts-display-xs-desktop-regular-lineheight: 24px !default;
+$fonts-display-xs-desktop-regular-size: 20px !default;
+$fonts-display-xs-desktop-regular-spacing: 0px !default;
+$fonts-display-xs-desktop-regular-weight: 400 !default;
+$fonts-text-base-desktop-medium-family: Comic Sans MS, ComicSansMS-Bold !default;
+$fonts-text-base-desktop-medium-lineheight: 20px !default;
+$fonts-text-base-desktop-medium-size: 16px !default;
+$fonts-text-base-desktop-medium-spacing: 0px !default;
+$fonts-text-base-desktop-medium-weight: 700 !default;
+$fonts-text-base-desktop-regular-family: Comic Sans MS, ComicSansMS !default;
+$fonts-text-base-desktop-regular-lineheight: 20px !default;
+$fonts-text-base-desktop-regular-size: 16px !default;
+$fonts-text-base-desktop-regular-spacing: 0px !default;
+$fonts-text-base-desktop-regular-weight: 400 !default;
+$fonts-text-m-desktop-medium-family: Comic Sans MS, ComicSansMS-Bold !default;
+$fonts-text-m-desktop-medium-lineheight: 20px !default;
+$fonts-text-m-desktop-medium-size: 18px !default;
+$fonts-text-m-desktop-medium-spacing: 0px !default;
+$fonts-text-m-desktop-medium-weight: 700 !default;
+$fonts-text-m-desktop-regular-family: Comic Sans MS, ComicSansMS !default;
+$fonts-text-m-desktop-regular-lineheight: 20px !default;
+$fonts-text-m-desktop-regular-size: 18px !default;
+$fonts-text-m-desktop-regular-spacing: 0px !default;
+$fonts-text-m-desktop-regular-weight: 400 !default;
+$fonts-text-s-desktop-medium-family: Comic Sans MS, ComicSansMS-Bold !default;
+$fonts-text-s-desktop-medium-lineheight: 16px !default;
+$fonts-text-s-desktop-medium-size: 14px !default;
+$fonts-text-s-desktop-medium-spacing: 0px !default;
+$fonts-text-s-desktop-medium-weight: 700 !default;
+$fonts-text-s-desktop-regular-family: Comic Sans MS, ComicSansMS !default;
+$fonts-text-s-desktop-regular-lineheight: 16px !default;
+$fonts-text-s-desktop-regular-size: 14px !default;
+$fonts-text-s-desktop-regular-spacing: 0px !default;
+$fonts-text-s-desktop-regular-weight: 400 !default;
+$fonts-text-xs-desktop-medium-family: Comic Sans MS, ComicSansMS-Bold !default;
+$fonts-text-xs-desktop-medium-lineheight: 16px !default;
+$fonts-text-xs-desktop-medium-size: 13px !default;
+$fonts-text-xs-desktop-medium-spacing: 0px !default;
+$fonts-text-xs-desktop-medium-weight: 700 !default;
+$fonts-text-xs-desktop-regular-family: Comic Sans MS, ComicSansMS !default;
+$fonts-text-xs-desktop-regular-lineheight: 16px !default;
+$fonts-text-xs-desktop-regular-size: 13px !default;
+$fonts-text-xs-desktop-regular-spacing: 0px !default;
+$fonts-text-xs-desktop-regular-weight: 400 !default;
+$fonts-text-xxs-desktop-medium-family: Comic Sans MS, ComicSansMS-Bold !default;
+$fonts-text-xxs-desktop-medium-lineheight: 16px !default;
+$fonts-text-xxs-desktop-medium-size: 10px !default;
+$fonts-text-xxs-desktop-medium-spacing: 0px !default;
+$fonts-text-xxs-desktop-medium-weight: 700 !default;
+$fonts-text-xxs-desktop-regular-family: Comic Sans MS, ComicSansMS !default;
+$fonts-text-xxs-desktop-regular-lineheight: 16px !default;
+$fonts-text-xxs-desktop-regular-size: 10px !default;
+$fonts-text-xxs-desktop-regular-spacing: 0px !default;
+$fonts-text-xxs-desktop-regular-weight: 400 !default;
+
+$tokens: (
+  'fonts': (
+    'Display 1XL/Desktop Medium': (
+      'family': $fonts-display-1-xl-desktop-medium-family,
+      'lineheight': $fonts-display-1-xl-desktop-medium-lineheight,
+      'size': $fonts-display-1-xl-desktop-medium-size,
+      'spacing': $fonts-display-1-xl-desktop-medium-spacing,
+      'weight': $fonts-display-1-xl-desktop-medium-weight
+    ),
+    'Display 1XL/Desktop Regular': (
+      'family': $fonts-display-1-xl-desktop-regular-family,
+      'lineheight': $fonts-display-1-xl-desktop-regular-lineheight,
+      'size': $fonts-display-1-xl-desktop-regular-size,
+      'spacing': $fonts-display-1-xl-desktop-regular-spacing,
+      'weight': $fonts-display-1-xl-desktop-regular-weight
+    ),
+    'Display 2XL/Desktop Medium': (
+      'family': $fonts-display-2-xl-desktop-medium-family,
+      'lineheight': $fonts-display-2-xl-desktop-medium-lineheight,
+      'size': $fonts-display-2-xl-desktop-medium-size,
+      'spacing': $fonts-display-2-xl-desktop-medium-spacing,
+      'weight': $fonts-display-2-xl-desktop-medium-weight
+    ),
+    'Display 2XL/Desktop Regular': (
+      'family': $fonts-display-2-xl-desktop-regular-family,
+      'lineheight': $fonts-display-2-xl-desktop-regular-lineheight,
+      'size': $fonts-display-2-xl-desktop-regular-size,
+      'spacing': $fonts-display-2-xl-desktop-regular-spacing,
+      'weight': $fonts-display-2-xl-desktop-regular-weight
+    ),
+    'Display L/Desktop Medium': (
+      'family': $fonts-display-l-desktop-medium-family,
+      'lineheight': $fonts-display-l-desktop-medium-lineheight,
+      'size': $fonts-display-l-desktop-medium-size,
+      'spacing': $fonts-display-l-desktop-medium-spacing,
+      'weight': $fonts-display-l-desktop-medium-weight
+    ),
+    'Display L/Desktop Regular': (
+      'family': $fonts-display-l-desktop-regular-family,
+      'lineheight': $fonts-display-l-desktop-regular-lineheight,
+      'size': $fonts-display-l-desktop-regular-size,
+      'spacing': $fonts-display-l-desktop-regular-spacing,
+      'weight': $fonts-display-l-desktop-regular-weight
+    ),
+    'Display M/Desktop Medium': (
+      'family': $fonts-display-m-desktop-medium-family,
+      'lineheight': $fonts-display-m-desktop-medium-lineheight,
+      'size': $fonts-display-m-desktop-medium-size,
+      'spacing': $fonts-display-m-desktop-medium-spacing,
+      'weight': $fonts-display-m-desktop-medium-weight
+    ),
+    'Display M/Desktop Regular': (
+      'family': $fonts-display-m-desktop-regular-family,
+      'lineheight': $fonts-display-m-desktop-regular-lineheight,
+      'size': $fonts-display-m-desktop-regular-size,
+      'spacing': $fonts-display-m-desktop-regular-spacing,
+      'weight': $fonts-display-m-desktop-regular-weight
+    ),
+    'Display S/Desktop Medium': (
+      'family': $fonts-display-s-desktop-medium-family,
+      'lineheight': $fonts-display-s-desktop-medium-lineheight,
+      'size': $fonts-display-s-desktop-medium-size,
+      'spacing': $fonts-display-s-desktop-medium-spacing,
+      'weight': $fonts-display-s-desktop-medium-weight
+    ),
+    'Display S/Desktop Regular': (
+      'family': $fonts-display-s-desktop-regular-family,
+      'lineheight': $fonts-display-s-desktop-regular-lineheight,
+      'size': $fonts-display-s-desktop-regular-size,
+      'spacing': $fonts-display-s-desktop-regular-spacing,
+      'weight': $fonts-display-s-desktop-regular-weight
+    ),
+    'Display XL/Desktop Medium': (
+      'family': $fonts-display-xl-desktop-medium-family,
+      'lineheight': $fonts-display-xl-desktop-medium-lineheight,
+      'size': $fonts-display-xl-desktop-medium-size,
+      'spacing': $fonts-display-xl-desktop-medium-spacing,
+      'weight': $fonts-display-xl-desktop-medium-weight
+    ),
+    'Display XL/Desktop Regular': (
+      'family': $fonts-display-xl-desktop-regular-family,
+      'lineheight': $fonts-display-xl-desktop-regular-lineheight,
+      'size': $fonts-display-xl-desktop-regular-size,
+      'spacing': $fonts-display-xl-desktop-regular-spacing,
+      'weight': $fonts-display-xl-desktop-regular-weight
+    ),
+    'Display XS/Desktop Medium': (
+      'family': $fonts-display-xs-desktop-medium-family,
+      'lineheight': $fonts-display-xs-desktop-medium-lineheight,
+      'size': $fonts-display-xs-desktop-medium-size,
+      'spacing': $fonts-display-xs-desktop-medium-spacing,
+      'weight': $fonts-display-xs-desktop-medium-weight
+    ),
+    'Display XS/Desktop Regular': (
+      'family': $fonts-display-xs-desktop-regular-family,
+      'lineheight': $fonts-display-xs-desktop-regular-lineheight,
+      'size': $fonts-display-xs-desktop-regular-size,
+      'spacing': $fonts-display-xs-desktop-regular-spacing,
+      'weight': $fonts-display-xs-desktop-regular-weight
+    ),
+    'Text Base/Desktop Medium': (
+      'family': $fonts-text-base-desktop-medium-family,
+      'lineheight': $fonts-text-base-desktop-medium-lineheight,
+      'size': $fonts-text-base-desktop-medium-size,
+      'spacing': $fonts-text-base-desktop-medium-spacing,
+      'weight': $fonts-text-base-desktop-medium-weight
+    ),
+    'Text Base/Desktop Regular': (
+      'family': $fonts-text-base-desktop-regular-family,
+      'lineheight': $fonts-text-base-desktop-regular-lineheight,
+      'size': $fonts-text-base-desktop-regular-size,
+      'spacing': $fonts-text-base-desktop-regular-spacing,
+      'weight': $fonts-text-base-desktop-regular-weight
+    ),
+    'Text M/Desktop Medium': (
+      'family': $fonts-text-m-desktop-medium-family,
+      'lineheight': $fonts-text-m-desktop-medium-lineheight,
+      'size': $fonts-text-m-desktop-medium-size,
+      'spacing': $fonts-text-m-desktop-medium-spacing,
+      'weight': $fonts-text-m-desktop-medium-weight
+    ),
+    'Text M/Desktop Regular': (
+      'family': $fonts-text-m-desktop-regular-family,
+      'lineheight': $fonts-text-m-desktop-regular-lineheight,
+      'size': $fonts-text-m-desktop-regular-size,
+      'spacing': $fonts-text-m-desktop-regular-spacing,
+      'weight': $fonts-text-m-desktop-regular-weight
+    ),
+    'Text S/Desktop Medium': (
+      'family': $fonts-text-s-desktop-medium-family,
+      'lineheight': $fonts-text-s-desktop-medium-lineheight,
+      'size': $fonts-text-s-desktop-medium-size,
+      'spacing': $fonts-text-s-desktop-medium-spacing,
+      'weight': $fonts-text-s-desktop-medium-weight
+    ),
+    'Text S/Desktop Regular': (
+      'family': $fonts-text-s-desktop-regular-family,
+      'lineheight': $fonts-text-s-desktop-regular-lineheight,
+      'size': $fonts-text-s-desktop-regular-size,
+      'spacing': $fonts-text-s-desktop-regular-spacing,
+      'weight': $fonts-text-s-desktop-regular-weight
+    ),
+    'Text XS/Desktop Medium': (
+      'family': $fonts-text-xs-desktop-medium-family,
+      'lineheight': $fonts-text-xs-desktop-medium-lineheight,
+      'size': $fonts-text-xs-desktop-medium-size,
+      'spacing': $fonts-text-xs-desktop-medium-spacing,
+      'weight': $fonts-text-xs-desktop-medium-weight
+    ),
+    'Text XS/Desktop Regular': (
+      'family': $fonts-text-xs-desktop-regular-family,
+      'lineheight': $fonts-text-xs-desktop-regular-lineheight,
+      'size': $fonts-text-xs-desktop-regular-size,
+      'spacing': $fonts-text-xs-desktop-regular-spacing,
+      'weight': $fonts-text-xs-desktop-regular-weight
+    ),
+    'Text XXS/Desktop Medium': (
+      'family': $fonts-text-xxs-desktop-medium-family,
+      'lineheight': $fonts-text-xxs-desktop-medium-lineheight,
+      'size': $fonts-text-xxs-desktop-medium-size,
+      'spacing': $fonts-text-xxs-desktop-medium-spacing,
+      'weight': $fonts-text-xxs-desktop-medium-weight
+    ),
+    'Text XXS/Desktop Regular': (
+      'family': $fonts-text-xxs-desktop-regular-family,
+      'lineheight': $fonts-text-xxs-desktop-regular-lineheight,
+      'size': $fonts-text-xxs-desktop-regular-size,
+      'spacing': $fonts-text-xxs-desktop-regular-spacing,
+      'weight': $fonts-text-xxs-desktop-regular-weight
+    )
+  )
+);

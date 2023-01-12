@@ -1,0 +1,26 @@
+@use "../../../../../generated/scss/ColorHelpers";
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  outline: none;
+  background: ColorHelpers.useColor("Warning/Light/30");
+
+  &:hover {
+    background: ColorHelpers.useColor("Warning/Light/40");
+  }
+
+  &:active {
+    background: ColorHelpers.useColor("Warning/Light/50");
+  }
+
+  svg {
+    height: 24px;
+    width: 24px;
+  }
+}

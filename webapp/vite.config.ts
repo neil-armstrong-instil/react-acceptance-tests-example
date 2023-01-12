@@ -1,4 +1,5 @@
 import {defineConfig} from "vite";
+import svgrPlugin from "vite-plugin-svgr";
 import {swcReactRefresh} from "vite-plugin-swc-react-refresh";
 import tsconfigPaths from "vite-tsconfig-paths";
 
@@ -14,6 +15,12 @@ export default defineConfig({
   },
   plugins: [
     swcReactRefresh(),
-    tsconfigPaths()
+    tsconfigPaths(),
+    svgrPlugin({
+      svgrOptions: {
+        icon: false,
+        dimensions: true
+      }
+    })
   ]
 });

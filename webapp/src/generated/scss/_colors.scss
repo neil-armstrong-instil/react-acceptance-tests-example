@@ -1,0 +1,164 @@
+
+$colors-error-light-10: rgba(255, 242, 242, 255) !default;
+$colors-error-light-15: rgba(254, 221, 221, 255) !default;
+$colors-error-light-20: rgba(252, 200, 199, 255) !default;
+$colors-error-light-30: rgba(248, 157, 155, 255) !default;
+$colors-error-light-40: rgba(241, 114, 112, 255) !default;
+$colors-error-light-50: rgba(231, 75, 73, 255) !default;
+$colors-error-light-60: rgba(214, 44, 41, 255) !default;
+$colors-error-light-70: rgba(187, 21, 19, 255) !default;
+$colors-error-light-80: rgba(147, 7, 6, 255) !default;
+$colors-error-light-90: rgba(96, 1, 1, 255) !default;
+$colors-error-light-95: rgba(38, 0, 0, 255) !default;
+$colors-info-light-10: rgba(223, 242, 255, 255) !default;
+$colors-info-light-15: rgba(182, 228, 255, 255) !default;
+$colors-info-light-20: rgba(138, 213, 255, 255) !default;
+$colors-info-light-30: rgba(68, 180, 255, 255) !default;
+$colors-info-light-40: rgba(6, 151, 255, 255) !default;
+$colors-info-light-50: rgba(0, 129, 221, 255) !default;
+$colors-info-light-60: rgba(0, 109, 187, 255) !default;
+$colors-info-light-70: rgba(0, 89, 153, 255) !default;
+$colors-info-light-80: rgba(0, 69, 119, 255) !default;
+$colors-info-light-90: rgba(0, 50, 85, 255) !default;
+$colors-info-light-95: rgba(1, 30, 51, 255) !default;
+$colors-neutral-light-70: rgba(76, 87, 111, 255) !default;
+$colors-neutral-light-10: rgba(255, 255, 255, 255) !default;
+$colors-neutral-light-15: rgba(234, 237, 243, 255) !default;
+$colors-neutral-light-20: rgba(214, 220, 231, 255) !default;
+$colors-neutral-light-30: rgba(177, 187, 207, 255) !default;
+$colors-neutral-light-40: rgba(146, 158, 183, 255) !default;
+$colors-neutral-light-50: rgba(119, 132, 159, 255) !default;
+$colors-neutral-light-60: rgba(96, 109, 135, 255) !default;
+$colors-neutral-light-70: rgba(76, 87, 111, 255) !default;
+$colors-neutral-light-80: rgba(58, 67, 86, 255) !default;
+$colors-neutral-light-90: rgba(41, 48, 62, 255) !default;
+$colors-neutral-light-95: rgba(25, 29, 38, 255) !default;
+$colors-primary-light-10: rgba(255, 237, 241, 255) !default;
+$colors-primary-light-15: rgba(255, 196, 210, 255) !default;
+$colors-primary-light-20: rgba(255, 155, 179, 255) !default;
+$colors-primary-light-30: rgba(255, 114, 148, 255) !default;
+$colors-primary-light-40: rgba(241, 70, 110, 255) !default;
+$colors-primary-light-50: rgba(207, 48, 86, 255) !default;
+$colors-primary-light-60: rgba(118, 118, 118, 255) !default;
+$colors-primary-light-70: rgba(139, 17, 46, 255) !default;
+$colors-primary-light-80: rgba(105, 7, 30, 255) !default;
+$colors-primary-light-90: rgba(71, 0, 17, 255) !default;
+$colors-primary-light-95: rgba(50, 0, 4, 255) !default;
+$colors-secondary-light-10: rgba(241, 255, 237, 255) !default;
+$colors-secondary-light-15: rgba(210, 255, 196, 255) !default;
+$colors-secondary-light-20: rgba(179, 255, 155, 255) !default;
+$colors-secondary-light-30: rgba(148, 255, 114, 255) !default;
+$colors-secondary-light-40: rgba(110, 241, 70, 255) !default;
+$colors-secondary-light-50: rgba(86, 207, 48, 255) !default;
+$colors-secondary-light-60: rgba(64, 173, 30, 255) !default;
+$colors-secondary-light-70: rgba(46, 139, 17, 255) !default;
+$colors-secondary-light-80: rgba(30, 105, 7, 255) !default;
+$colors-secondary-light-90: rgba(17, 71, 0, 255) !default;
+$colors-secondary-light-95: rgba(16, 56, 0, 255) !default;
+$colors-success-light-10: rgba(236, 255, 244, 255) !default;
+$colors-success-light-15: rgba(193, 248, 215, 255) !default;
+$colors-success-light-20: rgba(152, 242, 188, 255) !default;
+$colors-success-light-30: rgba(90, 223, 143, 255) !default;
+$colors-success-light-40: rgba(41, 204, 106, 255) !default;
+$colors-success-light-50: rgba(23, 176, 84, 255) !default;
+$colors-success-light-60: rgba(13, 149, 67, 255) !default;
+$colors-success-light-70: rgba(8, 121, 53, 255) !default;
+$colors-success-light-80: rgba(6, 94, 41, 255) !default;
+$colors-success-light-90: rgba(5, 66, 29, 255) !default;
+$colors-success-light-95: rgba(4, 38, 18, 255) !default;
+$colors-warning-light-10: rgba(255, 253, 242, 255) !default;
+$colors-warning-light-15: rgba(254, 242, 204, 255) !default;
+$colors-warning-light-20: rgba(252, 227, 167, 255) !default;
+$colors-warning-light-30: rgba(248, 190, 106, 255) !default;
+$colors-warning-light-40: rgba(241, 156, 64, 255) !default;
+$colors-warning-light-50: rgba(231, 128, 36, 255) !default;
+$colors-warning-light-60: rgba(214, 105, 19, 255) !default;
+$colors-warning-light-70: rgba(187, 83, 8, 255) !default;
+$colors-warning-light-80: rgba(147, 62, 3, 255) !default;
+$colors-warning-light-90: rgba(96, 39, 0, 255) !default;
+$colors-warning-light-95: rgba(38, 15, 0, 255) !default;
+$colors-white: rgba(255, 255, 255, 255) !default;
+
+$tokens: (
+  'colors': (
+    'Error/Light/10': $colors-error-light-10,
+    'Error/Light/15': $colors-error-light-15,
+    'Error/Light/20': $colors-error-light-20,
+    'Error/Light/30': $colors-error-light-30,
+    'Error/Light/40': $colors-error-light-40,
+    'Error/Light/50': $colors-error-light-50,
+    'Error/Light/60': $colors-error-light-60,
+    'Error/Light/70': $colors-error-light-70,
+    'Error/Light/80': $colors-error-light-80,
+    'Error/Light/90': $colors-error-light-90,
+    'Error/Light/95': $colors-error-light-95,
+    'Info/Light/10': $colors-info-light-10,
+    'Info/Light/15': $colors-info-light-15,
+    'Info/Light/20': $colors-info-light-20,
+    'Info/Light/30': $colors-info-light-30,
+    'Info/Light/40': $colors-info-light-40,
+    'Info/Light/50': $colors-info-light-50,
+    'Info/Light/60': $colors-info-light-60,
+    'Info/Light/70': $colors-info-light-70,
+    'Info/Light/80': $colors-info-light-80,
+    'Info/Light/90': $colors-info-light-90,
+    'Info/Light/95': $colors-info-light-95,
+    'Neutral / Light / 70': $colors-neutral-light-70,
+    'Neutral/Light/10': $colors-neutral-light-10,
+    'Neutral/Light/15': $colors-neutral-light-15,
+    'Neutral/Light/20': $colors-neutral-light-20,
+    'Neutral/Light/30': $colors-neutral-light-30,
+    'Neutral/Light/40': $colors-neutral-light-40,
+    'Neutral/Light/50': $colors-neutral-light-50,
+    'Neutral/Light/60': $colors-neutral-light-60,
+    'Neutral/Light/70': $colors-neutral-light-70,
+    'Neutral/Light/80': $colors-neutral-light-80,
+    'Neutral/Light/90': $colors-neutral-light-90,
+    'Neutral/Light/95': $colors-neutral-light-95,
+    'Primary/Light/10': $colors-primary-light-10,
+    'Primary/Light/15': $colors-primary-light-15,
+    'Primary/Light/20': $colors-primary-light-20,
+    'Primary/Light/30': $colors-primary-light-30,
+    'Primary/Light/40': $colors-primary-light-40,
+    'Primary/Light/50': $colors-primary-light-50,
+    'Primary/Light/60': $colors-primary-light-60,
+    'Primary/Light/70': $colors-primary-light-70,
+    'Primary/Light/80': $colors-primary-light-80,
+    'Primary/Light/90': $colors-primary-light-90,
+    'Primary/Light/95': $colors-primary-light-95,
+    'Secondary/Light/10': $colors-secondary-light-10,
+    'Secondary/Light/15': $colors-secondary-light-15,
+    'Secondary/Light/20': $colors-secondary-light-20,
+    'Secondary/Light/30': $colors-secondary-light-30,
+    'Secondary/Light/40': $colors-secondary-light-40,
+    'Secondary/Light/50': $colors-secondary-light-50,
+    'Secondary/Light/60': $colors-secondary-light-60,
+    'Secondary/Light/70': $colors-secondary-light-70,
+    'Secondary/Light/80': $colors-secondary-light-80,
+    'Secondary/Light/90': $colors-secondary-light-90,
+    'Secondary/Light/95': $colors-secondary-light-95,
+    'Success/Light/10': $colors-success-light-10,
+    'Success/Light/15': $colors-success-light-15,
+    'Success/Light/20': $colors-success-light-20,
+    'Success/Light/30': $colors-success-light-30,
+    'Success/Light/40': $colors-success-light-40,
+    'Success/Light/50': $colors-success-light-50,
+    'Success/Light/60': $colors-success-light-60,
+    'Success/Light/70': $colors-success-light-70,
+    'Success/Light/80': $colors-success-light-80,
+    'Success/Light/90': $colors-success-light-90,
+    'Success/Light/95': $colors-success-light-95,
+    'Warning/Light/10': $colors-warning-light-10,
+    'Warning/Light/15': $colors-warning-light-15,
+    'Warning/Light/20': $colors-warning-light-20,
+    'Warning/Light/30': $colors-warning-light-30,
+    'Warning/Light/40': $colors-warning-light-40,
+    'Warning/Light/50': $colors-warning-light-50,
+    'Warning/Light/60': $colors-warning-light-60,
+    'Warning/Light/70': $colors-warning-light-70,
+    'Warning/Light/80': $colors-warning-light-80,
+    'Warning/Light/90': $colors-warning-light-90,
+    'Warning/Light/95': $colors-warning-light-95,
+    'White': $colors-white
+  )
+);

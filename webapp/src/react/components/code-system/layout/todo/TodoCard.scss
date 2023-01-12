@@ -1,0 +1,15 @@
+@use "../../../../../generated/scss/ColorHelpers";
+
+.todoCard {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid ColorHelpers.useColor("Primary/Light/95");
+
+  .bottomBar {
+    margin: 5px;
+
+    .button {
+      width: 100%;
+    }
+  }
+}
